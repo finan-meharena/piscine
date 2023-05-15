@@ -27,11 +27,10 @@ void	ft_print_numbers(void)
 		ft_putchar(n);
 		n++;
 	}
-	ft_putchar('\n');
 }
 
-int	main(void)
-{
-	ft_print_numbers();
-	return (0);
-}
+// int	main(void)
+// {
+// 	ft_print_numbers();
+// 	return (0);
+// }

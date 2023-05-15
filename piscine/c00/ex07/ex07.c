@@ -33,11 +33,11 @@ void	ft_putnbr(int nb)
 		ft_putchar(nb + 48);
 }
 
-int	main(void)
-{
-	int	number;
+// int	main(void)
+// {
+// 	int	number;
 
-	number = 12345;
-	ft_putnbr(number);
-	return (0);
-}
+// 	number = 12345;
+// 	ft_putnbr(number);
+// 	return (0);
+// }

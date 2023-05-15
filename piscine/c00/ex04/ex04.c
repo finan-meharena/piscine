@@ -30,8 +30,8 @@ void	ft_is_negative(int n)
 	}
 }
 
-int	main(void)
-{
-	ft_is_negative(4568);
-	return (0);
-}
+// int	main(void)
+// {
+// 	ft_is_negative(4568);
+// 	return (0);
+// }

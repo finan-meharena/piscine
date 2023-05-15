@@ -22,8 +22,6 @@ void	ft_print(int i, int j, int k)
 	ft_putchar(i);
 	ft_putchar(j);
 	ft_putchar(k);
-	ft_putchar(',');
-	ft_putchar(' ');
 }
 
 void	ft_print_comb(void)
@@ -42,6 +40,11 @@ void	ft_print_comb(void)
 			while (k <= '9')
 			{
 				ft_print(i, j, k);
+				if (!(i == '7' && j == '8' && k == '9'))
+				{
+					ft_putchar(',');
+					ft_putchar(' ');
+				}
 				k++;
 			}
 			j++;

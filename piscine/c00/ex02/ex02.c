@@ -27,11 +27,10 @@ void	ft_print_reverse_alphabet(void)
 		ft_putchar(letter);
 		letter--;
 	}
-	write(1, "\n", 1);
 }
 
-int	main(void)
-{
-	ft_print_reverse_alphabet();
-	return (0);
-}
+// int	main(void)
+// {
+// 	ft_print_reverse_alphabet();
+// 	return (0);
+// }
