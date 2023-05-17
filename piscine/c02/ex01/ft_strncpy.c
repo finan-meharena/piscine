@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkidane <finanmeharenak@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/16 05:43:04 by fkidane           #+#    #+#             */
-/*   Updated: 2023/05/16 05:43:04 by fkidane          ###   ########.fr       */
+/*   Created: 2023/05/17 19:05:01 by fkidane           #+#    #+#             */
+/*   Updated: 2023/05/17 19:05:01 by fkidane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (src[i] != '\0' && i < n)
 	{
 		dest[i] = src[i];
 		i++;
@@ -31,7 +31,7 @@ char	*ft_strcpy(char *dest, char *src)
 //     char src[] = "Hello, world!";
 //     char dest[50];
 
-//     ft_strcpy(dest, src);
+//     ft_strncpy(dest, src, 5);
 
 //     printf("Source string: %s\n", src);
 //     printf("Copied string: %s\n", dest);

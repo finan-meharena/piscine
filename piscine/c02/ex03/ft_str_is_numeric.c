@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkidane <finanmeharenak@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/16 05:43:04 by fkidane           #+#    #+#             */
-/*   Updated: 2023/05/16 05:43:04 by fkidane          ###   ########.fr       */
+/*   Created: 2023/05/17 19:19:26 by fkidane           #+#    #+#             */
+/*   Updated: 2023/05/17 19:19:26 by fkidane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+int	ft_str_is_numeric(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (str[i])
 	{
-		dest[i] = src[i];
+		if (str[i] < '0' || str[i] > '9')
+			return (0);
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (1);
 }
 
 // #include <stdio.h>
 
-// int main()
-// {
-//     char src[] = "Hello, world!";
-//     char dest[50];
+// int main() {
+//     char *test1 = "12345";
+//     char *test2 = "42abc";
+//     char *test3 = "";
 
-//     ft_strcpy(dest, src);
-
-//     printf("Source string: %s\n", src);
-//     printf("Copied string: %s\n", dest);
+//     printf("Test 1: %s\n", ft_str_is_numeric(test1) ? "Passed" : "Failed");
+//     printf("Test 2: %s\n", ft_str_is_numeric(test2) ? "Passed" : "Failed");
+//     printf("Test 3: %s\n", ft_str_is_numeric(test3) ? "Passed" : "Failed");
 
 //     return 0;
 // }

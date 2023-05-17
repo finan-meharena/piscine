@@ -1,40 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkidane <finanmeharenak@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/16 05:43:04 by fkidane           #+#    #+#             */
-/*   Updated: 2023/05/16 05:43:04 by fkidane          ###   ########.fr       */
+/*   Created: 2023/05/17 19:50:30 by fkidane           #+#    #+#             */
+/*   Updated: 2023/05/17 19:50:30 by fkidane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strupcase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (str[i])
 	{
-		dest[i] = src[i];
+		if (str[i] >= 'a' && str[i] <= 'z')
+		{
+			str[i] -= 32;
+		}
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (str);
 }
 
 // #include <stdio.h>
 
 // int main()
 // {
-//     char src[] = "Hello, world!";
-//     char dest[50];
-
-//     ft_strcpy(dest, src);
-
-//     printf("Source string: %s\n", src);
-//     printf("Copied string: %s\n", dest);
-
-//     return 0;
+//     char str[] = "asdZXC 932";
+//     ft_strupcase(str);
+//     printf(str);
 // }
