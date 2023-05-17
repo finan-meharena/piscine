@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// #include <stdio.h>
+
 int	ft_strlen(char *str)
 {
 	int	n;
@@ -21,3 +23,15 @@ int	ft_strlen(char *str)
 	}
 	return (n);
 }
+
+// int ft_strlen(char *str);
+
+// int main()
+// {
+//     char str[] = "hey";
+//     int length = ft_strlen(str);
+
+//     printf("Length of the string: %d\n", length);
+
+//     return 0;
+// }

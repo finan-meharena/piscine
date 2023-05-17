@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// #include <stdio.h>
+
 void	ft_ultimate_div_mod(int *a, int *b)
 {
 	int	temp;
@@ -18,3 +20,21 @@ void	ft_ultimate_div_mod(int *a, int *b)
 	*a = *a / *b;
 	*b = temp % *b;
 }
+
+// int main()
+// {
+//     int num1 = 15;
+//     int num2 = 4;
+
+//     printf("Before division and modulo:\n");
+//     printf("num1 = %d\n", num1);
+//     printf("num2 = %d\n", num2);
+
+//     ft_ultimate_div_mod(&num1, &num2);
+
+//     printf("\nAfter division and modulo:\n");
+//     printf("num1 = %d\n", num1);
+//     printf("num2 = %d\n", num2);
+
+//     return 0;
+// }
