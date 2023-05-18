@@ -25,15 +25,12 @@ int	ft_str_is_numeric(char *str)
 }
 
 // #include <stdio.h>
-
 // int main() {
 //     char *test1 = "12345";
 //     char *test2 = "42abc";
 //     char *test3 = "";
-
 //     printf("Test 1: %s\n", ft_str_is_numeric(test1) ? "Passed" : "Failed");
 //     printf("Test 2: %s\n", ft_str_is_numeric(test2) ? "Passed" : "Failed");
 //     printf("Test 3: %s\n", ft_str_is_numeric(test3) ? "Passed" : "Failed");
-
 //     return 0;
 // }

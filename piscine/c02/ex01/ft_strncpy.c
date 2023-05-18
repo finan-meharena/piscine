@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// #include <string.h>
+
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int	i;
@@ -20,6 +22,10 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[i] = src[i];
 		i++;
 	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+	}
 	dest[i] = '\0';
 	return (dest);
 }
@@ -28,13 +34,11 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 
 // int main()
 // {
-//     char src[] = "Hello, world!";
-//     char dest[50];
-
+//     char src[] = "Hel";
+//     char dest[50]= "Worlds";
 //     ft_strncpy(dest, src, 5);
-
+// 	//strncpy(dest, src, 5);
 //     printf("Source string: %s\n", src);
 //     printf("Copied string: %s\n", dest);
-
 //     return 0;
 // }
