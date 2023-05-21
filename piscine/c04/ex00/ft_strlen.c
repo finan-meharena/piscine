@@ -31,4 +31,3 @@ int	ft_strlen(const char *s)
 // 	printf("The length of the string is %d.\n", result);
 // 	return (0);
 // }
-
