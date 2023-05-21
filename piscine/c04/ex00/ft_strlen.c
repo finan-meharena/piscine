@@ -10,26 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(const char *s)
+int	ft_strlen(const char *s)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s[i] != '\0')
-    {
-        i++;
-    }
-    return (i);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 
-/*
-#include <stdio.h>
+// #include <stdio.h>
 
-int main()
-{
-  	char str[] = "Life is good.";
-  	int result = ft_strlen(str);
-  	printf("The length of the string is %d.\n", result);
-  	return 0;
-}
-*/
+// int	main(void)
+// {
+// 	char str[] = "Life is good.";
+// 	int result = ft_strlen(str);
+// 	printf("The length of the string is %d.\n", result);
+// 	return (0);
+// }
+

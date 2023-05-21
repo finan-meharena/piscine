@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 void	ft_putstr(char *str)
 {
 	int	i;
@@ -22,11 +24,10 @@ void	ft_putstr(char *str)
 	}
 }
 
-#include <stdio.h>
-#include <unistd.h>
+// #include <stdio.h>
 
-int main(){
-  char str[] = "hello";
-  ft_putstr(str);
-  return (0);
-}
+// int main(){
+//   char str[] = "hello";
+//   ft_putstr(str);
+//   return (0);
+// }
