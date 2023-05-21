@@ -38,10 +38,10 @@ int	ft_atoi(char *str)
 	return (num * sign);
 }
 
-// #include <stdio.h>
-// #include<stdlib.h>
-// int main()
-// {
-//   char str[] = "    \v   \n   +-+-++-8415a64546";
-//   printf("%d", ft_atoi(str));
-// }
+#include <stdio.h>
+#include<stdlib.h>
+int main()
+{
+  char str[] = "    \v   \n   +-+--++-8415a64546";
+  printf("%d", ft_atoi(str));
+}
