@@ -30,12 +30,14 @@ char	*ft_strcat(char *dest, char *src)
 }
 
 // #include <stdio.h>
+// #include <string.h>
 
 // int		main(void)
 // {
-// 	char a[7] = "aqueduc";
-// 	char b[] = "barbecu";
-// 	ft_strcat(a, b);
-// 	printf("%s\n", a);
+// 	char src[7] = "hello";
+// 	char dest[] = "world";
+// 	// ft_strcat(a, b);
+// 	// strcat(a, b);
+// 	printf("%s\n", ft_strcat(src, dest));
 // 	return (0);
 // }

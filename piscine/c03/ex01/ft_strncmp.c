@@ -31,9 +31,9 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 // int main()
 // {
 //   char str1[] = "lets";
-//   char str2[] = "sgo";
+//   char str2[] = "letst";
 //   int ret;
 //   ret = ft_strncmp(str1, str2, 5);
-//   printf("str1 is less than str2");
+//   printf(" : %d", ret);
 //    return(0);
 // }
