@@ -1,45 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkidane <finanmeharenak@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 20:35:23 by fkidane           #+#    #+#             */
-/*   Updated: 2023/05/18 20:35:23 by fkidane          ###   ########.fr       */
+/*   Created: 2023/05/22 19:59:08 by fkidane           #+#    #+#             */
+/*   Updated: 2023/05/22 19:59:08 by fkidane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+// #include <stdio.h>
 
-void	ft_putchar(char c)
+int	ft_sqrt(int nb)
 {
-	write (1, &c, 1);
+	int	i;
+
+	i = 1;
+	if (nb == 0)
+	{
+		return (0);
+	}
+	while ((i * i) < nb && nb < 46341)
+		i++;
+	if ((i * i) == nb)
+		return (i);
+	else
+		return (0);
 }
 
-void	ft_putnbr(int nb)
-{
-	if (nb == -2147483648)
-	{
-		write(1,'-2147483648',10);
-	}
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb = -nb;
-	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	if (nb < 10)
-	{
-		ft_putchar(nb + '0');
-	}
-}
-
-// int main()
-// {
-//   ft_putnbr(-17);
-// }
+// int main() 
+// { 
+//     printf("%d", ft_sqrt(625)); 
+//     return 0; 
+// } 

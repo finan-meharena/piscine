@@ -1,45 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkidane <finanmeharenak@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 20:35:23 by fkidane           #+#    #+#             */
-/*   Updated: 2023/05/18 20:35:23 by fkidane          ###   ########.fr       */
+/*   Created: 2023/05/22 21:33:09 by fkidane           #+#    #+#             */
+/*   Updated: 2023/05/22 21:33:09 by fkidane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+// #include <stdio.h>
 
-void	ft_putchar(char c)
+int	ft_fibonacci(int index)
 {
-	write (1, &c, 1);
-}
-
-void	ft_putnbr(int nb)
-{
-	if (nb == -2147483648)
-	{
-		write(1,'-2147483648',10);
-	}
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb = -nb;
-	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	if (nb < 10)
-	{
-		ft_putchar(nb + '0');
-	}
+	if (index < 0)
+		return (-1);
+	if (index == 0)
+		return (0);
+	else if (index == 1)
+		return (1);
+	else
+		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 }
 
 // int main()
 // {
-//   ft_putnbr(-17);
+// 	int term = 15;
+// 	printf("%d", ft_fibonacci(term));
 // }

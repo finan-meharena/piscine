@@ -1,45 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkidane <finanmeharenak@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 20:35:23 by fkidane           #+#    #+#             */
-/*   Updated: 2023/05/18 20:35:23 by fkidane          ###   ########.fr       */
+/*   Created: 2023/05/22 19:59:12 by fkidane           #+#    #+#             */
+/*   Updated: 2023/05/22 19:59:12 by fkidane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+// #include <stdio.h>
 
-void	ft_putchar(char c)
+int	ft_is_prime(int nb)
 {
-	write (1, &c, 1);
-}
+	int	i;
 
-void	ft_putnbr(int nb)
-{
-	if (nb == -2147483648)
+	i = 2;
+	if (nb <= 1)
+		return (0);
+	while (i <= nb / 2)
 	{
-		write(1,'-2147483648',10);
+		if (nb % i == 0)
+			return (0);
+		i++;
 	}
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb = -nb;
-	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	if (nb < 10)
-	{
-		ft_putchar(nb + '0');
-	}
+	return (1);
 }
 
 // int main()
 // {
-//   ft_putnbr(-17);
+//     printf("%d\n", ft_is_prime(12));
 // }
